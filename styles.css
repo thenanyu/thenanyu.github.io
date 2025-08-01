@@ -1,0 +1,315 @@
+/* Light mode (default) */
+:root {
+  --background-color: #fcfaf8;
+  --text-color: #2c2826;
+  --text-color-light: #5c534d;
+  --link-color: #8b4513;
+  --link-hover-color: #654321;
+  --border-color: #e8e2dd;
+  --heading-color: #1a1614;
+}
+
+/* Dark mode */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background-color: #1c1917;
+    --text-color: #e8e2dd;
+    --text-color-light: #b8afa8;
+    --link-color: #d4a373;
+    --link-hover-color: #e6ccb2;
+    --border-color: #2d2826;
+    --heading-color: #f8f4f1;
+  }
+}
+
+/* Base styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 20px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  font-family: 'Crimson Pro', Georgia, serif;
+  font-weight: 400;
+  line-height: 1.7;
+  margin: 0 auto;
+  max-width: 38rem;
+  padding: 1.5rem 1.25rem;
+}
+
+/* Add top padding on desktop */
+@media (min-width: 640px) {
+  body {
+    padding-top: 3rem;  /* about a paragraph's worth of space */
+  }
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+  color: var(--heading-color);
+  font-family: 'Spectral', Georgia, serif;
+  font-weight: 600;
+  line-height: 1.3;
+  margin: 1.5rem 0 0.5rem;
+  letter-spacing: -0.02em;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+h2 {
+  font-size: 1.75rem;
+  margin-top: 2rem;
+  margin-bottom: 0.75rem;
+}
+
+h1 + p,
+h2 + p,
+h3 + p {
+  margin-top: 0.5rem;
+}
+
+p {
+  margin-bottom: 1.25rem;
+}
+
+/* Links */
+a {
+  color: var(--link-color);
+  text-decoration: none;
+  border-bottom: 1px solid color-mix(in srgb, var(--link-color) 30%, transparent);
+  transition: all 0.2s ease;
+}
+
+a:hover {
+  color: var(--link-hover-color);
+  border-bottom-color: var(--link-hover-color);
+}
+
+/* Lists */
+ul, ol {
+  margin: 1.25rem 0; /* Match paragraph spacing for vertical rhythm */
+  padding-left: 0;
+  list-style: none;
+}
+
+li {
+  margin: 0.25rem 0;
+  padding-left: 1.5rem;
+  position: relative;
+}
+
+/* Custom em dash bullets for unordered lists */
+ul li::before {
+  content: "—"; /* Em dash */
+  position: absolute;
+  left: 0;
+  color: var(--text-color-light);
+}
+
+/* Numbers for ordered lists */
+ol {
+  counter-reset: list-counter;
+}
+
+ol li {
+  counter-increment: list-counter;
+}
+
+ol li::before {
+  content: counter(list-counter) ".";
+  position: absolute;
+  left: 0;
+  color: var(--text-color-light);
+  font-weight: 600;
+}
+
+/* Horizontal rule */
+hr {
+  border: 0;
+  border-top: 1px solid var(--border-color);
+  margin: 1.25rem 0;
+}
+
+/* Code and pre */
+code {
+  background-color: var(--border-color);
+  border-radius: 0.25rem;
+  font-family: Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+  font-size: 0.875rem;
+  padding: 0.2em 0.4em;
+}
+
+pre {
+  background-color: var(--border-color);
+  border-radius: 0.375rem;
+  margin: 0.75rem 0;
+  overflow-x: auto;
+  padding: 0.75rem;
+}
+
+pre code {
+  background-color: transparent;
+  padding: 0;
+}
+
+/* Italics and bold */
+em {
+  color: var(--text-color-light);
+}
+
+strong {
+  color: var(--heading-color);
+}
+
+/* Media queries for responsive design */
+@media (max-width: 640px) {
+  html {
+    font-size: 18px;
+  }
+
+  body {
+    padding: 1rem;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+}
+
+/* Footnotes */
+.footnotes {
+  margin-top: 3rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--border-color);
+  font-size: 0.9rem;
+  font-style: italic;
+  color: var(--text-color-light);
+}
+
+.footnote-ref,
+.footnote-backref {
+  display: none;
+}
+
+.footnotes ol {
+  list-style: none;
+  padding-left: 0;
+}
+
+.footnotes li {
+  margin-bottom: 0.5em;
+}
+
+.footnotes p {
+  display: inline;
+  margin: 0;
+}
+
+/* Hide footnotes heading */
+#footnote-label {
+  display: none;
+}
+
+/* Hide all numeric references (both forward and back) */
+a[data-footnote-ref],
+a[data-footnote-backref] {
+  display: none;
+}
+
+/* Remove list numbers and padding */
+.footnotes ol {
+  list-style: none;
+  padding-left: 0;
+}
+
+/* Definition lists */
+dl {
+  margin: 1.25rem 0;
+}
+
+dt {
+  font-family: 'Spectral', Georgia, serif;
+  font-weight: 600;
+  font-size: 1.1rem;
+  margin-top: 0.75rem;
+}
+
+dd {
+  margin-left: 0;
+  color: var(--text-color-light);
+  font-style: italic;
+}
+
+/* Pull Quotes */
+blockquote:not(.twitter-tweet) {
+  margin: 2rem 0;
+  padding: 0.5rem 2rem;
+  font-size: 1.4rem;
+  line-height: 1.5;
+  font-weight: 400;
+  font-style: italic;
+  letter-spacing: -0.01em;
+  border-left: 2px solid color-mix(in srgb, var(--text-color) 15%, transparent);
+}
+
+blockquote:not(.twitter-tweet) p {
+  margin-bottom: 0;
+  color: var(--heading-color);
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 640px) {
+  blockquote {
+    margin: 2rem 0;
+    padding: 0.5rem 1rem;
+    font-size: 1.125rem;
+  }
+}
+
+/* Dark mode adjustments for blockquotes */
+@media (prefers-color-scheme: dark) {
+  blockquote:not(.twitter-tweet) p {
+    color: color-mix(in srgb, var(--text-color) 50%, var(--link-color) 25%);
+  }
+}
+
+/* Tweet container */
+.tweet-container {
+  margin: 2rem 0;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+/* Twitter embed styling */
+.twitter-tweet {
+  margin: 0 auto !important;
+}
+
+.tweet-iframe {
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  border: none;
+}
+
+/* All images are big and centered */
+img {
+  display: block;
+  max-width: 100%;
+  max-height: 700px;
+  height: auto;
+  margin: 2rem auto;
+  border-radius: 4px;
+}

@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title><![CDATA[Nan Yu]]></title>
+        <description><![CDATA[Thoughts on technology, design, product, and the world we live in]]></description>
+        <link>https://thenanyu.com</link>
+        <image>
+            <url>https://thenanyu.com/assets/images/profile.jpeg</url>
+            <title>Nan Yu</title>
+            <link>https://thenanyu.com</link>
+        </image>
+        <generator>RSS for Node</generator>
+        <lastBuildDate>Fri, 01 Aug 2025 16:12:14 GMT</lastBuildDate>
+        <atom:link href="https://thenanyu.com/feed.xml" rel="self" type="application/rss+xml"/>
+        <pubDate>Fri, 01 Aug 2025 16:12:14 GMT</pubDate>
+        <copyright><![CDATA[2025 Nan Yu]]></copyright>
+        <language><![CDATA[en]]></language>
+        <ttl>60</ttl>
+        <item>
+            <title><![CDATA[Skip to the end]]></title>
+            <description><![CDATA[Computers gave us the means, but AI gives us the ends]]></description>
+            <link>https://thenanyu.com/skip-to-the-end.html</link>
+            <guid isPermaLink="false">https://thenanyu.com/skip-to-the-end.html</guid>
+            <pubDate>Thu, 24 Jul 2025 04:00:00 GMT</pubDate>
+            <content:encoded><![CDATA[<blockquote>
+<p> Computers gave us the means, but AI gives us the ends</p>
+</blockquote>
+<p><em>Jul 2025</em></p>
+<p>If you&#39;re a developer from a certain era (i.e. pre-2021), then you&#39;ve grown-up being indoctrinated into the <strong>IT school of thought</strong>. You reflexively see every problem you encounter through the lens of relational databases and form submissions.</p>
+<p>You might even judge how &quot;technical&quot; someone is by their ability to massage real-world problems into table schemas and imperative logic.</p>
+<p>You probably thought <a href="https://xkcd.com/1425/">this</a> was a funny joke once...</p>
+<p><img src="https://thenanyu.com/assets/images/ai-brain-xkcd.png" alt="for the first 75 years of computing, this was a good joke" title="for the first 75 years of computing, this was a good joke"></p>
+<p>...and for the first 75 years of computing—from 1945 to 2020—it was.</p>
+<p>Database lookups were trivial, computer vision was virtually impossible. IT-brained programmers knew this. Ignorant normal people didn&#39;t.</p>
+<p>But today you can snap a picture on your phone and <a href="https://merlin.allaboutbirds.org/">identify the exact species</a> of bird you just saw, and the best way to know if a picture was taken in a national park isn&#39;t to examine its metadata, but to <a href="https://www.youtube.com/watch?v=ts5lPDV--cU">simply ask</a>.</p>
+<p>What was virtually impossible became <strong>trivial</strong> in a hurry.</p>
+<p>The basic assumptions we had about how computers work have flipped. The IT-indoctrinated brain has always tried to attack messy real-world problems by surrounding them in a logical ring-fence. They hold onto this notion that computers are tools in the same way that shovels and drills are tools. They&#39;re a means to an end. Shovels are a means for making holes in the ground. Drills are means for making <a href="https://www.library.hbs.edu/working-knowledge/what-customers-want-from-your-products">holes in the wall</a>.</p>
+<p>To really take advantage of what AI can do, developers need to start thinking about software differently— not as the means to but as the ends. Don&#39;t deliver tools that allow users to achieve outcomes. Just deliver the outcomes.</p>
+<ul>
+<li><p>Rather than giving users folders, tags, and naming conventions, you can just understand and organize their content.</p>
+</li>
+<li><p>Rather than asking users to construct state machines and write in DSLs, you can just execute natural-language rules.</p>
+</li>
+<li><p>Instead of requiring users to learn a templating system and string replacements, you can simply write custom messages en mass.</p>
+</li>
+</ul>
+<p>Don&#39;t make drills or shovels, make holes.</p>
+]]></content:encoded>
+            <dc:creator>Nan Yu</dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[AI adoption is a UX problem]]></title>
+            <description><![CDATA[We have plenty of intelligence. The problem is making it usable]]></description>
+            <link>https://thenanyu.com/ux.html</link>
+            <guid isPermaLink="false">https://thenanyu.com/ux.html</guid>
+            <pubDate>Tue, 08 Apr 2025 04:00:00 GMT</pubDate>
+            <content:encoded><![CDATA[<blockquote>
+<p> We have plenty of intelligence. The problem is making it usable</p>
+</blockquote>
+<p><em>Apr 2025</em></p>
+<p>Toby Lütke, CEO of Shopify, just made the rounds on Twitter with an internal memo that he sent to his company. In it, he basically tells all of his employees that the time to mass adopt AI in their business is now. No matter which job or role you&#39;re in, you need to be using AI all the time, every day, or risk damaging your performance review. If you haven&#39;t seen it, read it for yourself here:</p>
+<p><div class="tweet-container">
+  <blockquote class="twitter-tweet">
+    <a style="opacity: 0;" href="https://twitter.com/tobi/status/1909231499448401946">View on X/Twitter</a>
+  </blockquote>
+  <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+</div></p>
+<p>This echoes what I&#39;ve heard from other CEOs in and around tech — they recognize the usefulness and productivity gains on offer from AI tools like ChatGPT and Claude. But for some reason, that isn&#39;t enough for their employees to actually adopt them at scale. They have to be threatened with bad reviews.</p>
+<p>The AI tools that seem to spread by themselves within workforces are things like <a href="http://cursor.com/">Cursor</a> for interactive coding and <a href="https://www.granola.ai/">Granola</a> for automated note-taking. These tools are casually dismissed as &quot;GPT wrappers&quot; by some industry commentators — after all, ChatGPT (or Sonnet or Gemini or Llama or Deepseek) is doing all the &quot;real work&quot;, right?</p>
+<p>People who take this perspective seem to be throwing away all the lessons we&#39;ve learned about software distribution. It&#39;s like they saw Instagram and waived it off as an &quot;ImageMagick wrapper&quot;... or Dropbox as an <a href="https://news.ycombinator.com/item?id=8863">&quot;rsync wrapper&quot;</a>.</p>
+<p>Those products won because they made powerful, highly technical tools accessible through thoughtful design. The biggest barrier to mass AI adoption is not capability or intelligence; we have those in spades. <strong>It&#39;s UX</strong>.</p>
+<p><img src="https://thenanyu.com/assets/images/ux-astro-meme.png" alt="Always has been" title="Always has been"></p>
+<p>The internet recently went wild using ChatGPT&#39;s image generation capabilities to create Studio Ghibli-inspired versions of favorite family photos and memes. They did this because Twitter user <em>@GrantSlatton</em> <a href="https://x.com/GrantSlatton/status/1904631016356274286">promoted the idea</a> and the prompt was fairly easy to replicate. Everyone could have done this on their own, but they didn&#39;t. A tool with infinite flexibility, no matter how powerful, is inaccessible to a general audience.</p>
+<p>It took the commercialization of the graphical user interface for traditional computing to move beyond a technical audience. With AI, we&#39;re still in our command-line phase.</p>
+<p>The magic of something like Cursor is that there&#39;s a workflow which is heavily orchestrated to help users utilize the power that LLMs can provide. Sure — at its core, there&#39;s a series of prompts and calls to base models that generates the code... but this is marshaled through a UI that keeps users continuously flowing through the <em>prompt &gt; generate &gt; eval &gt; test</em> loop.</p>
+<p>At the end of the day, AIs are still computers, and they&#39;re providing value to humans. So all the lessons of human-computer interaction we&#39;ve learned over the years continue to apply. The constraints and capabilities have evolved, but the principles are the same.</p>
+<p>We&#39;re still barely scratching the surface. For all of its success, tools like Cursor are still built for a highly technical audience. AI adoption won&#39;t come from more powerful models or CEO mandates — it will come from thoughtfully designed interfaces that make intelligence accessible to everyone.</p>
+]]></content:encoded>
+            <dc:creator>Nan Yu</dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[There has never been a better time to be a coder]]></title>
+            <description><![CDATA[Vibe-coding, low-code, medium-code... it's all good, and it's all a lot of&nbsp;fun]]></description>
+            <link>https://thenanyu.com/coder.html</link>
+            <guid isPermaLink="false">https://thenanyu.com/coder.html</guid>
+            <pubDate>Thu, 06 Mar 2025 05:00:00 GMT</pubDate>
+            <content:encoded><![CDATA[<blockquote>
+<p>Vibe-coding, low-code, medium-code... it&#39;s all good, and it&#39;s all a lot of&nbsp;fun</p>
+</blockquote>
+<p><em>Mar 2025</em></p>
+<p>I picked up a coding project today that I hadn&#39;t touched in about a year, and I was completely blown away. Quickly, using modern tools, I could rebuild my personal context to get back to productivity in minutes.</p>
+<p>You see, in the old days, I would have dreaded this exercise — I would have had to remember dozens of little decisions I made, so many miscellaneous details that don&#39;t really matter to the final product, but stand in the way between you and what&#39;s interesting.</p>
+<p>But today I just asked my coding agent, &quot;Hey, how do I build and deploy this thing?&quot; It took about 10 seconds to figure it out and let me know.</p>
+<p>I immediately got started with a small feature. I told the agent the basic idea and it came back with an implementation. I zhuzhed it up by hand afterwards, but all the initial choices were fairly reasonable.</p>
+<p>That&#39;s the trick, really. Most choices you make in a codebase are just fairly reasonable. The bits that I want to have fun with, I can still do. The coding agent lives inside an IDE, so I can put my hands back on the the controls whenever I decide. Some people call what I&#39;m doing &quot;vibe coding,&quot; but I don&#39;t think that&#39;s it... There&#39;s too much precision for it to be based couched as &quot;vibes&quot;; it&#39;s closer to various degrees of self-driving car.</p>
+<p>When I&#39;m dictating commands and letting agent mode run, it&#39;s very similar to being in the back of a Waymo. I can see the map, the lidar scans, and the steering wheel making adjustments. When I&#39;m in chat mode and validating every move, it feels like enhanced cruise control. I&#39;m setting the target speed and telling it to switch lanes, but it&#39;s handling all of the execution.</p>
+<p>During the trickiest moments, or even the moments that are most <em><strong>fun</strong></em>, I&#39;m fully hands-on and in control of the details, with a bit of auto-complete assistance if I want it. It&#39;s all quite natural and smooth. There&#39;s just never been as enjoyable, or as productive a time to be a coder as today.</p>
+]]></content:encoded>
+            <dc:creator>Nan Yu</dc:creator>
+        </item>
+    </channel>
+</rss>
